@@ -16,8 +16,8 @@ jobs:
       image: node:20-alpine
       env:
         NODE_ENV: production
-      volumes:
-        - /source/directory:/destination/directory
+      # volumes:
+      #   - /source/directory:/destination/directory
 
     steps:
       - name: Checkout repository
