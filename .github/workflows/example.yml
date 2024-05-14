@@ -1,0 +1,30 @@
+name: example
+
+# Running jobs in a container
+# https://docs.github.com/en/actions/using-jobs/running-jobs-in-a-container
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      # image: node:20
+      image: node:20-alpine
+      env:
+        NODE_ENV: production
+      volumes:
+        - /source/directory:/destination/directory
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test --if-present
