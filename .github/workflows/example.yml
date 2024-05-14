@@ -28,3 +28,6 @@ jobs:
 
       - name: Run tests
         run: npm run test --if-present
+
+      - name: Format check
+        run: npm run format-check

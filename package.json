@@ -5,7 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No tests to run\""
+    "test": "echo \"No tests to run\"",
+    "format-check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/jonlabelle/workflow-container-job/issues"
   },
-  "homepage": "https://github.com/jonlabelle/workflow-container-job#readme"
+  "homepage": "https://github.com/jonlabelle/workflow-container-job#readme",
+  "dependencies": {
+    "prettier": "latest"
+  }
 }
