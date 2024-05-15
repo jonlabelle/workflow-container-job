@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: node:20-alpine
+      image: node:alpine
       env:
         NODE_ENV: production
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Show container platform details
-        run: uname -a
+        uses: actions/checkout@main
 
       - name: Show node version
         run: node --version
+
+      - name: Show node environment
+        run: echo "${NODE_ENV}"
 
       - name: Install dependencies
         run: npm install
