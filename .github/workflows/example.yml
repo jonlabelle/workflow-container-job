@@ -10,14 +10,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Run on ${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
+
     container:
-      # image: node:20
       image: node:20-alpine
       env:
         NODE_ENV: production
-      # volumes:
-      #   - /source/directory:/destination/directory
+
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, windows-latest]
 
     steps:
       - name: Checkout repository
