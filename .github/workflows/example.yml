@@ -10,17 +10,12 @@ on:
 
 jobs:
   build:
-    name: Run on ${{ matrix.platform }}
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
 
     container:
       image: node:20-alpine
       env:
         NODE_ENV: production
-
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, windows-latest]
 
     steps:
       - name: Checkout repository
