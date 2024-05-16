@@ -1,3 +1,4 @@
+---
 version: 2
 
 updates:
@@ -7,7 +8,6 @@ updates:
       interval: monthly
     groups:
       github-actions-patch-updates:
-        applies-to: version-updates
         update-types:
           - minor
           - patch
