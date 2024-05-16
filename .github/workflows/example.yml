@@ -25,9 +25,7 @@ jobs:
         run: ps
 
       - name: Show Alpine release details
-        run: |
-          # cat /etc/alpine-release
-          cat /etc/os-release
+        run: cat /etc/os-release
 
       - name: Show node version
         run: node --version
@@ -36,13 +34,13 @@ jobs:
         run: npm --version
 
       - name: Show node environment
-        run: echo "${NODE_ENV}"
+        run: echo $NODE_ENV
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm run test --if-present
 
-      - name: Format check
+      - name: Check format
         run: npm run format-check
