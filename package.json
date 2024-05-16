@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests to run'",
+    "prettier-version": "prettier --version",
     "format-check": "prettier --check --log-level debug '**.{js,json,md,yml}'"
   },
   "repository": {

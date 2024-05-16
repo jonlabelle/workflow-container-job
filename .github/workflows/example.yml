@@ -44,7 +44,7 @@ jobs:
         run: npm run test --if-present
 
       - name: Show prettier version
-        run: prettier --version
+        run: npm run prettier-version
 
       - name: Check format
         run: npm run format-check
