@@ -22,13 +22,18 @@ jobs:
         uses: actions/checkout@main
 
       - name: Show current shell interpreter
-        run: echo $0
+        run: ps
 
-      - name: Show Alpine release
-        run: cat /etc/alpine-release
+      - name: Show Alpine release details
+        run: |
+          # cat /etc/alpine-release
+          cat /etc/os-release
 
       - name: Show node version
         run: node --version
+
+      - name: Show npm version
+        run: npm --version
 
       - name: Show node environment
         run: echo "${NODE_ENV}"
