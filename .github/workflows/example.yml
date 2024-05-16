@@ -21,8 +21,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
 
-      - name: Show current shell interpreter
-        run: ps
+      - name: Show current shell interpreter # note: should show `sh`, not `bash` cause we're running Alpine
+        run: ps | grep ' sh$' | grep -v grep | awk '{print $NF}'
 
       - name: Show Alpine release details
         run: cat /etc/os-release
