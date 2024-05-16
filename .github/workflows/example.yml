@@ -21,6 +21,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
 
+      - name: Show current shell interpreter
+        run: echo $0
+
+      - name: Show Alpine release
+        run: cat /etc/alpine-release
+
       - name: Show node version
         run: node --version
 
